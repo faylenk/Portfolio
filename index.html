@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrius Sheridan Leal | FaylenK - Desenvolvedor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Separados -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="css/blackhole.css">
+</head>
+<body>
+    <!-- Efeito de partículas -->
+    <div id="particles-js"></div>
+
+    <!-- Simulação de buraco negro -->
+    <div id="black-hole"></div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">Faylen<span>K</span></a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Andrius Sheridan Leal</h1>
+            <h2>FaylenK</h2>
+            <p>Desenvolvedor Full-Stack apaixonado por tecnologia, design e soluções inovadoras.</p>
+            <a href="#projects" class="cta-button">Ver Projetos</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Sou Andrius, também conhecido como FaylenK. Sou um desenvolvedor iniciante que busca sempre melhorar meus conhecimentos</p>
+                <p>Com background em desenvolvimento web e design, busco sempre unir estética e funcionalidade em meus projetos.</p>
+                <p>Estou constantemente aprendendo novas tecnologias e explorando formas criativas de resolver problemas.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projetos Concluídos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Tecnologias Dominadas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-container">
+                    <img src="assets/images/profile.jpg" alt="Andrius Sheridan Leal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Minhas Habilidades</h2>
+            <p>Tecnologias e ferramentas que utilizo no meu dia a dia</p>
+
+            <!-- Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-box">
+                    <span class="stat-number" data-stat="stars">12</span>
+                    <span class="stat-label">Total Stars</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" data-stat="commits">100</span>
+                    <span class="stat-label">Commits (2023)</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" data-stat="prs">75</span>
+                    <span class="stat-label">Total PRs</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" data-stat="issues">11</span>
+                    <span class="stat-label">Total Issues</span>
+                </div>
+            </div>
+
+            <!-- Widgets de Estatísticas Alinhados -->
+            <div class="stats-widgets">
+                <!-- Total Contributions -->
+                <div class="stats-widget streak-widget">
+                    <span class="streak-number">216</span>
+                    <span class="streak-label">Total Contributions</span>
+                    <span class="streak-period">Feb 16, 2023<br>Present</span>
+                </div>
+
+                <!-- Most Used Languages -->
+                <div class="stats-widget languages-widget">
+                    <h3>Most Used Languages</h3>
+                    <div class="languages-list">
+                        <div class="language-item" data-percentage="46.71">
+                            <div class="language-info">
+                                <span class="language-name">JavaScript</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress"></div>
+                            </div>
+                            <span class="language-percentage">46.71%</span>
+                        </div>
+
+                        <div class="language-item" data-percentage="22.44">
+                            <div class="language-info">
+                                <span class="language-name">Go</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress"></div>
+                            </div>
+                            <span class="language-percentage">22.44%</span>
+                        </div>
+
+                        <div class="language-item" data-percentage="13.40">
+                            <div class="language-info">
+                                <span class="language-name">Lua</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress"></div>
+                            </div>
+                            <span class="language-percentage">13.40%</span>
+                        </div>
+
+                        <div class="language-item" data-percentage="11.36">
+                            <div class="language-info">
+                                <span class="language-name">Java</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress"></div>
+                            </div>
+                            <span class="language-percentage">11.36%</span>
+                        </div>
+
+                        <div class="language-item" data-percentage="3.55">
+                            <div class="language-info">
+                                <span class="language-name">TypeScript</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress"></div>
+                            </div>
+                            <span class="language-percentage">3.55%</span>
+                        </div>
+
+                        <div class="language-item" data-percentage="2.55">
+                            <div class="language-info">
+                                <span class="language-name">Python</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress"></div>
+                            </div>
+                            <span class="language-percentage">2.55%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Streak Stats -->
+                <div class="stats-widget streak-widget">
+                    <div style="margin-bottom: 25px;">
+                        <span class="streak-number">3</span>
+                        <span class="streak-label">Current Streak</span>
+                        <span class="streak-period">Sep 24 - Sep 26</span>
+                    </div>
+                    <div>
+                        <span class="streak-number">27</span>
+                        <span class="streak-label">Longest Streak</span>
+                        <span class="streak-period">Jan 21 - Feb 16</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills por Categoria -->
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Linguagens de Programação</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-header">
+                                <span class="skill-name">TypeScript</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-header">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks & Bibliotecas</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-header">
+                                <span class="skill-name">React.js</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-header">
+                                <span class="skill-name">Flutter</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="70">
+                            <div class="skill-header">
+                                <span class="skill-name">Spring/span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bancos de Dados</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-header">
+                                <span class="skill-name">MariaDB</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-header">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-header">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="70">
+                            <div class="skill-header">
+                                <span class="skill-name">Redis</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Meus Projetos</h2>
+            <p>Alguns dos projetos que desenvolvi ou contribuí</p>
+
+            <div class="projects-grid">
+                <!-- Projeto 1: Kirzen Bot -->
+                <div class="project-card" data-project="kirzen">
+                    <div class="card-inner">
+                        <!-- Frente do Card -->
+                        <div class="card-front">
+                            <div class="project-image">
+                                <img src="assets/images/kirzen-bot.png" alt="Kirzen Bot">
+                                <div class="project-badge">Principal</div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3>Kirzen Bot</h3>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Node.js</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">Discord.js</span>
+                                    </div>
+                                </div>
+                                <p>Bot multifuncional para Discord com moderação, utilidade e muito mais.</p>
+                                <div class="project-features">
+                                    <span class="feature">🤖 50+ Comandos</span>
+                                    <span class="feature">⚡ Alta Performance</span>
+                                    <span class="feature">🔧 Manutenção Ativa</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://discord.com/oauth2/authorize?client_id=1042686365223096330&permissions=8&integration_type=0&scope=bot" class="project-link primary" target="_blank" onclick="event.stopPropagation()">
+                                        <i class="fas fa-robot"></i> Adicionar Bot
+                                    </a>
+                                    <a href="https://discord.gg/SNCTkPtbhr" class="project-link" target="_blank" onclick="event.stopPropagation()">
+                                        <i class="fab fa-discord"></i> Suporte
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Verso do Card -->
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h4>🚀 Kirzen Bot</h4>
+                                <p>Bot multifuncional com foco em performance e estabilidade</p>
+                                <div class="project-stats">
+                                    <span>⭐ 20+ Comandos</span>
+                                    <span>⚡ 90% Uptime</span>
+                                    <span>👥 3+ Servers</span>
+                                </div>
+                                <p class="click-hint">Clique para ver detalhes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                    <div class="card-particles"></div>
+                </div>
+
+                <!-- Projeto 2: Devnite Studios -->
+                <div class="project-card" data-project="devnite">
+                    <div class="card-inner">
+                        <!-- Frente do Card -->
+                        <div class="card-front">
+                            <div class="project-image">
+                                <img src="assets/images/devnite-studios.png" alt="Devnite Studios">
+                                <div class="project-badge">Comunidade</div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <h3>Devnite Studios</h3>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">Comunidade</span>
+                                        <span class="tech-tag">Desenvolvimento</span>
+                                        <span class="tech-tag">Colaboração</span>
+                                    </div>
+                                </div>
+                                <p>Comunidade de desenvolvimento focada em criar projetos inovadores e colaborativos.</p>
+                                <div class="project-features">
+                                    <span class="feature">👥 5+ Membros</span>
+                                    <span class="feature">🚀 Projetos Ativos</span>
+                                    <span class="feature">⛔️ Em Construção</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://discord.gg/JPPtyde37X" class="project-link primary" target="_blank" onclick="event.stopPropagation()">
+                                        <i class="fab fa-discord"></i> Entrar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Verso do Card -->
+                        <div class="card-back">
+                            <div class="card-back-content">
+                                <h4>💻 Devnite Studios</h4>
+                                <p>Comunidade de desenvolvedores apaixonados por tecnologia</p>
+                                <div class="project-stats">
+                                    <span>👥 500+ Membros</span>
+                                    <span>🚀 10+ Projetos</span>
+                                    <span>💡 Mentoria Ativa</span>
+                                </div>
+                                <p class="click-hint">Clique para ver detalhes</p> <!-- Esta dica pode ser removida ou alterada -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                    <div class="card-particles"></div>
+                </div>
+
+            <!-- Modais -->
+            <div id="modal-kirzen" class="project-modal">
+                <div class="modal-content">
+                    <button class="modal-close">&times;</button>
+                    <div class="modal-header">
+                        <h3>Kirzen Bot</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Discord.js</span>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-description">
+                            <p>Bot multifuncional para Discord desenvolvido com tecnologias modernas.</p>
+                            <div class="modal-features">
+                                <span class="feature">Sistema de moderação avançado</span>
+                                <span class="feature">Economia completa com loja</span>
+                                <span class="feature">Sistema de levels e ranking</span>
+                            </div>
+                            <div class="modal-links">
+                                <a href="https://discord.com/oauth2/authorize?client_id=1042686365223096330&permissions=8&integration_type=0&scope=bot" class="project-link primary" target="_blank">
+                                    <i class="fas fa-robot"></i> Adicionar Bot
+                                </a>
+                                <a href="https://discord.gg/SNCTkPtbhr" class="project-link" target="_blank">
+                                    <i class="fab fa-discord"></i> Suporte
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-widgets">
+                            <div class="discord-widget-modal">
+                                <h4>Kirzen Community</h4>
+                                <iframe src="https://discord.com/widget?id=1322067371418062918&theme=dark" width="100%" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-devnite" class="project-modal">
+                <div class="modal-content">
+                    <button class="modal-close">&times;</button>
+                    <div class="modal-header">
+                        <h3>Devnite Studios</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Comunidade</span>
+                            <span class="tech-tag">Open Source</span>
+                            <span class="tech-tag">Colaboração</span>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-description">
+                            <p>Comunidade de desenvolvedores focada em projetos colaborativos.</p>
+                            <div class="modal-features">
+                                <span class="feature">Comunidade ativa</span>
+                                <span class="feature">Projetos open-source</span>
+                                <span class="feature">Eventos e workshops</span>
+                            </div>
+                            <div class="modal-links">
+                                <a href="https://discord.gg/JPPtyde37X" class="project-link primary" target="_blank">
+                                    <i class="fab fa-discord"></i> Entrar
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal-widgets">
+                            <div class="discord-widget-modal">
+                                <h4>Devnite Studios</h4>
+                                <iframe src="https://discord.com/widget?id=820706800818454598&theme=dark" width="100%" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Widgets do Discord -->
+    <div class="discord-widgets">
+        <div class="discord-widget-container">
+            <h3>Kirzen Bot Community</h3>
+            <div class="discord-widget">
+                <iframe src="https://discord.com/widget?id=1322067371418062918&theme=dark" width="350" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+            <a href="https://discord.gg/SNCTkPtbhr" class="discord-join-btn" target="_blank">
+                <i class="fab fa-discord"></i> Entrar no Servidor
+            </a>
+        </div>
+
+        <div class="discord-widget-container">
+            <h3>Devnite Studios</h3>
+            <div class="discord-widget">
+                <iframe src="https://discord.com/widget?id=820706800818454598&theme=dark" width="350" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+            <a href="https://discord.gg/JPPtyde37X" class="discord-join-btn" target="_blank">
+                <i class="fab fa-discord"></i> Entrar no Servidor
+            </a>
+        </div>
+    </div>
+
+    <!-- Repositórios do GitHub -->
+    <div class="github-repos">
+        <h3>Outros Repositórios</h3>
+        <div id="repos-container" class="repos-grid">
+            <!-- Os repositórios serão carregados via JavaScript -->
+        </div>
+    </div>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Fique à vontade para me contatar através das redes sociais abaixo:</p>
+
+            <div class="social-links">
+                <a href="#" class="social-link" id="discord-link">
+                    <div class="social-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-platform">Discord</span>
+                        <span class="social-handle">FaylenK</span>
+                    </div>
+                </a>
+
+                <a href="https://instagram.com/faylenk" class="social-link" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-platform">Instagram</span>
+                        <span class="social-handle">@faylenk</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/faylenk" class="social-link" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-platform">GitHub</span>
+                        <span class="social-handle">FaylenK</span>
+                    </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/andrius-sheridan-leal-65656b358" class="social-link" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-platform">LinkedIn</span>
+                        <span class="social-handle">Andrius Sheridan Leal</span>
+                    </div>
+                </a>
+
+                <a href="mailto:leal.andriuss@gmail.com" class="social-link">
+                    <div class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="social-info">
+                        <span class="social-platform">E-mail</span>
+                        <span class="social-handle">Envie-me um <br>E-mail</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Andrius Sheridan Leal (FaylenK). Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#home" class="footer-link">Início</a>
+                <a href="#about" class="footer-link">Sobre</a>
+                <a href="#skills" class="footer-link">Habilidades</a>
+                <a href="#projects" class="footer-link">Projetos</a>
+                <a href="#contact" class="footer-link">Contato</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/faylenk" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/faylenk" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/andrius-sheridan-leal-65656b358" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:leal.andriuss@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/github-widgets.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/blackhole.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/github-stats.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
