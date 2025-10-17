@@ -2,6 +2,7 @@
 .skills {
     background: rgba(20, 20, 20, 0.8);
     backdrop-filter: blur(10px);
+    padding: 80px 0;
 }
 
 .skills h2 {
@@ -9,6 +10,7 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
     position: relative;
+    color: var(--light-color);
 }
 
 .skills h2:after {
@@ -29,6 +31,8 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    color: var(--light-color);
+    opacity: 0.8;
 }
 
 /* Stats Overview */
@@ -47,11 +51,14 @@
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
 .stat-box:hover {
     transform: translateY(-5px);
     border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.2);
 }
 
 .stat-box .stat-number {
@@ -60,19 +67,16 @@
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .stat-box .stat-label {
     font-size: 0.9rem;
     color: var(--light-color);
     opacity: 0.8;
-}
-
-.stat-box small {
-    display: block;
-    margin-top: 5px;
-    font-size: 0.8rem;
-    opacity: 0.6;
+    position: relative;
+    z-index: 2;
 }
 
 /* Widgets de Estatísticas Alinhados */
@@ -95,6 +99,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .stats-widget:hover {
@@ -114,6 +120,8 @@
     margin-bottom: 25px;
     font-size: 1.4rem;
     font-weight: 600;
+    position: relative;
+    z-index: 2;
 }
 
 .languages-list {
@@ -131,6 +139,7 @@
     border-radius: 12px;
     transition: var(--transition);
     border: 1px solid transparent;
+    position: relative;
 }
 
 .language-item:hover {
@@ -166,6 +175,7 @@
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     border-radius: 10px;
     transition: width 1s ease-in-out;
+    width: 0%;
 }
 
 .language-percentage {
@@ -180,6 +190,15 @@
 .streak-widget {
     text-align: center;
     padding: 25px 20px;
+    position: relative;
+}
+
+.streak-widget > div {
+    margin-bottom: 25px;
+}
+
+.streak-widget > div:last-child {
+    margin-bottom: 0;
 }
 
 .streak-number {
@@ -190,6 +209,7 @@
     margin-bottom: 10px;
     line-height: 1;
     text-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+    position: relative;
 }
 
 .streak-label {
@@ -216,10 +236,6 @@
 }
 
 /* Efeito de brilho nos números */
-.streak-number {
-    position: relative;
-}
-
 .streak-number:after {
     content: '';
     position: absolute;
@@ -246,6 +262,15 @@
     padding: 25px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.15);
 }
 
 .skill-category h3 {
@@ -254,10 +279,13 @@
     font-size: 1.3rem;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .skill-category h3 i {
     margin-right: 10px;
+    font-size: 1.1rem;
 }
 
 .skills-list {
@@ -270,6 +298,8 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    position: relative;
+    z-index: 2;
 }
 
 .skill-header {
@@ -318,6 +348,59 @@
     animation: shimmer 2s infinite;
 }
 
+/* Animações */
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Efeitos de gradiente de fundo para as categorias */
+.skill-category:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    opacity: 0.7;
+}
+
+.skill-category:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #36d1dc, #5b86e5);
+    opacity: 0.7;
+}
+
+.skill-category:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #ffa726);
+    opacity: 0.7;
+}
+
 /* Responsividade da seção skills */
 @media (max-width: 1024px) {
     .stats-widgets {
@@ -331,10 +414,19 @@
     
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
+    .skills {
+        padding: 60px 0;
+    }
+    
+    .skills h2 {
+        font-size: 2rem;
+    }
+    
     .stats-widget {
         padding: 20px;
     }
@@ -360,9 +452,36 @@
     
     .stats-overview {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
     
     .skill-category {
         padding: 20px;
+    }
+    
+    .stats-widgets {
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills h2 {
+        font-size: 1.8rem;
+    }
+    
+    .stats-overview {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-box {
+        padding: 20px 15px;
+    }
+    
+    .stat-box .stat-number {
+        font-size: 2rem;
+    }
+    
+    .skills-grid {
+        gap: 15px;
     }
 }

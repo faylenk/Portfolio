@@ -1,77 +1,74 @@
-/* Buraco Negro Realista Aprimorado */
+/* Buraco Negro Otimizado */
 #black-hole {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: 
         radial-gradient(circle at 30% 30%, 
-            #1a1a1a 0%, 
-            #000000 20%, 
-            #000000 40%, 
-            transparent 70%);
-    z-index: -1;
-    animation: blackHolePulse 6s infinite alternate;
+            #0a0a1a 0%, 
+            #000000 40%,
+            #000000 100%);
+    z-index: 0;
+    animation: blackHolePulse 8s infinite alternate ease-in-out;
     box-shadow: 
-        0 0 80px rgba(108, 99, 255, 0.5),
-        inset 0 0 100px rgba(50, 40, 150, 0.8),
-        inset 0 0 30px rgba(255, 255, 255, 0.1);
+        0 0 60px rgba(108, 99, 255, 0.4),
+        inset 0 0 60px rgba(50, 40, 150, 0.6);
     pointer-events: none;
-    filter: blur(0.5px);
+    will-change: transform, box-shadow;
 }
 
-/* Disco de Acreção Realista */
+/* Disco de Acreção Tecnológico */
 #black-hole::before {
     content: '';
     position: absolute;
-    top: -25%;
-    left: -25%;
-    right: -25%;
-    bottom: -25%;
+    top: -30%;
+    left: -30%;
+    right: -30%;
+    bottom: -30%;
     border-radius: 50%;
     background: 
         conic-gradient(
             from 0deg at 50% 50%,
-            rgba(255, 50, 50, 0.9) 0%,
-            rgba(255, 200, 50, 0.9) 15%,
-            rgba(50, 255, 150, 0.9) 30%,
-            rgba(50, 150, 255, 0.9) 45%,
-            rgba(200, 50, 255, 0.9) 60%,
-            rgba(255, 50, 100, 0.9) 75%,
-            rgba(255, 50, 50, 0.9) 100%
+            rgba(108, 99, 255, 0.9) 0%,
+            rgba(80, 70, 200, 0.9) 25%,
+            rgba(50, 40, 150, 0.9) 50%,
+            rgba(80, 70, 200, 0.9) 75%,
+            rgba(108, 99, 255, 0.9) 100%
         );
-    z-index: -2;
-    animation: rotateDisk 15s linear infinite;
-    opacity: 0.8;
-    filter: blur(8px) brightness(1.2);
+    z-index: -1;
+    animation: rotateDisk 20s linear infinite;
+    opacity: 0.7;
+    filter: blur(5px) brightness(1.1);
     transform-origin: center;
+    will-change: transform;
 }
 
-/* Anel de energia exterior */
+/* Anel de energia exterior minimalista */
 #black-hole::after {
     content: '';
     position: absolute;
-    top: -40%;
-    left: -40%;
-    right: -40%;
-    bottom: -40%;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
     border-radius: 50%;
     background: 
         radial-gradient(
             circle at 50% 50%,
-            transparent 60%,
-            rgba(108, 99, 255, 0.1) 70%,
-            rgba(108, 99, 255, 0.05) 80%,
-            transparent 90%
+            transparent 65%,
+            rgba(108, 99, 255, 0.08) 75%,
+            transparent 85%
         );
-    z-index: -3;
-    animation: pulseOuter 8s infinite alternate;
+    z-index: -2;
+    animation: pulseOuter 10s infinite alternate;
+    will-change: transform, opacity;
 }
 
-/* Efeito de distorção gravitacional */
+/* Efeito de distorção gravitacional otimizado */
 .gravity-distortion {
     position: absolute;
     top: -50%;
@@ -82,49 +79,47 @@
     background: 
         radial-gradient(
             circle at 50% 50%,
-            transparent 30%,
-            rgba(108, 99, 255, 0.05) 40%,
-            rgba(108, 99, 255, 0.02) 50%,
-            transparent 60%
+            transparent 40%,
+            rgba(108, 99, 255, 0.03) 45%,
+            transparent 50%
         );
-    animation: gravitationalDistortion 12s infinite linear;
+    animation: gravitationalDistortion 15s infinite linear;
     z-index: -1;
+    will-change: transform;
 }
 
-/* Partículas sendo atraídas */
+/* Partículas otimizadas */
 .particle {
     position: absolute;
-    width: 3px;
-    height: 3px;
+    width: 2px;
+    height: 2px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
     pointer-events: none;
     z-index: -1;
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    will-change: transform;
 }
 
-/* Animações aprimoradas */
+/* Animações otimizadas */
 @keyframes blackHolePulse {
     0% {
         box-shadow: 
-            0 0 80px rgba(108, 99, 255, 0.5),
-            inset 0 0 100px rgba(50, 40, 150, 0.8),
-            inset 0 0 30px rgba(255, 255, 255, 0.1);
+            0 0 60px rgba(108, 99, 255, 0.4),
+            inset 0 0 60px rgba(50, 40, 150, 0.6);
         transform: translate(-50%, -50%) scale(1);
     }
     50% {
         box-shadow: 
-            0 0 120px rgba(108, 99, 255, 0.7),
-            inset 0 0 120px rgba(50, 40, 150, 1),
-            inset 0 0 40px rgba(255, 255, 255, 0.2);
-        transform: translate(-50%, -50%) scale(1.02);
+            0 0 80px rgba(108, 99, 255, 0.6),
+            inset 0 0 80px rgba(50, 40, 150, 0.8);
+        transform: translate(-50%, -50%) scale(1.01);
     }
     100% {
         box-shadow: 
-            0 0 100px rgba(108, 99, 255, 0.6),
-            inset 0 0 110px rgba(50, 40, 150, 0.9),
-            inset 0 0 35px rgba(255, 255, 255, 0.15);
-        transform: translate(-50%, -50%) scale(0.98);
+            0 0 70px rgba(108, 99, 255, 0.5),
+            inset 0 0 70px rgba(50, 40, 150, 0.7);
+        transform: translate(-50%, -50%) scale(0.99);
     }
 }
 
@@ -139,31 +134,31 @@
 
 @keyframes pulseOuter {
     0% {
-        opacity: 0.3;
+        opacity: 0.2;
         transform: scale(1);
     }
     100% {
-        opacity: 0.6;
-        transform: scale(1.1);
+        opacity: 0.4;
+        transform: scale(1.05);
     }
 }
 
 @keyframes gravitationalDistortion {
     0% {
         transform: rotate(0deg) scale(1);
-        opacity: 0.5;
+        opacity: 0.3;
     }
     50% {
-        transform: rotate(180deg) scale(1.05);
-        opacity: 0.7;
+        transform: rotate(180deg) scale(1.02);
+        opacity: 0.5;
     }
     100% {
         transform: rotate(360deg) scale(1);
-        opacity: 0.5;
+        opacity: 0.3;
     }
 }
 
-/* Efeito de lens flare para realismo */
+/* Efeito de lens flare otimizado */
 .lens-flare {
     position: absolute;
     top: 20%;
@@ -171,19 +166,39 @@
     width: 60%;
     height: 60%;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    filter: blur(15px);
-    animation: lensFlare 10s infinite alternate;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    filter: blur(10px);
+    animation: lensFlare 12s infinite alternate;
     z-index: -1;
+    will-change: transform, opacity;
 }
 
 @keyframes lensFlare {
     0%, 100% {
-        opacity: 0.3;
+        opacity: 0.2;
         transform: translate(-30%, -30%);
     }
     50% {
-        opacity: 0.6;
+        opacity: 0.4;
         transform: translate(-20%, -20%);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #black-hole {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #black-hole::before {
+        filter: blur(3px) brightness(1.1);
+    }
+}
+
+@media (max-width: 480px) {
+    #black-hole {
+        width: 120px;
+        height: 120px;
     }
 }
