@@ -577,7 +577,7 @@
 .discord-widget iframe {
   border-radius: 10px;
   margin-bottom: 15px;
-  width: 30%;
+  width: 100%;
 }
 
 .discord-join-btn {
